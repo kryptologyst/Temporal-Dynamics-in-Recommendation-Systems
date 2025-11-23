@@ -1,0 +1,33 @@
+# Model configuration for temporal recommendation systems
+
+# Time-Weighted Collaborative Filtering
+time_weighted_cf:
+  decay_factor: 0.1
+  min_interactions: 5
+  n_factors: 50
+
+# Temporal Matrix Factorization
+temporal_mf:
+  n_factors: 50
+  learning_rate: 0.01
+  regularization: 0.01
+  n_epochs: 100
+
+# Evaluation settings
+evaluation:
+  k_values: [5, 10, 20]
+  time_decay_factor: 0.1
+  n_recommendations: 20
+
+# Data settings
+data:
+  test_ratio: 0.2
+  validation_ratio: 0.1
+  min_interactions: 5
+
+# Demo settings
+demo:
+  n_users: 1000
+  n_items: 500
+  n_interactions: 10000
+  seed: 42
